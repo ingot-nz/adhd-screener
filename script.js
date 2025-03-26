@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         options.forEach((option, value) => {
             optionsWrapper.innerHTML += `
                 <label>
-                    <input type="radio" name="q${index}" value="${index < 6 ? value : option}" data-label="${option}">
+                    <input type="radio" name="q${index}" value="${index < 6 ? value : option}" data-label="${option}" required>
                     ${option}
                 </label>`;
         });
@@ -61,6 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         scoreElement.textContent = score;
         resultContainer.classList.remove("hidden");
+
+        // Scroll to results container smoothly
+        resultContainer.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     downloadButton.addEventListener("click", function () {
