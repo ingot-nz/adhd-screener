@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Final score
         const score = scoreElement.textContent; // Ensure you have a function to get this score
-        const scoreText = "Total Score: " + scoreElement.textContent + " / 18";
+        const scoreText = "Total Score: " + scoreElement.textContent + " / 24";
 
         // Box for score
         const boxWidth = 80;
